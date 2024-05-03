@@ -18,7 +18,7 @@ export default function SubLinks({ links, show, footer }) {
       }
     >
       {links.map((link) => (
-        <motion.li variants={slideRightVariants} key={link.toLowerCase()}>
+        <motion.li variants={footer && slideRightVariants} key={link.toLowerCase()}>
           <a
             className={footer ? "hover:underline" : "hover:text-neutral-900"}
             href="#"
