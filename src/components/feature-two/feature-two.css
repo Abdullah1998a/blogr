@@ -1,0 +1,19 @@
+.feature-two {
+  @apply grid items-center py-20 my-28 rounded-tr-[6rem] rounded-bl-[6rem] relative;
+  background: url("../../assets/images/bg-pattern-circles.svg") no-repeat center
+      -25rem / 50rem,
+    linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+}
+@media screen and (min-width: 768px) {
+  .feature-two {
+    background: url("../../assets/images/bg-pattern-circles.svg") no-repeat -50%
+        80% / 70%,
+      linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  }
+}
+.feature-two section > h3 {
+  @apply text-white;
+}
+.feature-two section > p {
+  @apply text-neutral-300;
+}

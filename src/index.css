@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "overpass-light";
+  src: url("./assets/fonts/overpass/overpass-light.ttf");
+}
+@font-face {
+  font-family: "overpass-semi-bold";
+  src: url("./assets/fonts/overpass/overpass-semi-bold.ttf");
+}
+@font-face {
+  font-family: "ubuntu-regular";
+  src: url("./assets/fonts/ubuntu/ubuntu-regular.ttf");
+}
+@font-face {
+  font-family: "ubuntu-medium";
+  src: url("./assets/fonts/ubuntu/ubuntu-medium.ttf");
+}
+@font-face {
+  font-family: "ubuntu-bold";
+  src: url("./assets/fonts/ubuntu/ubuntu-bold.ttf");
+}
+::-webkit-scrollbar {
+  @apply hidden;
+}
+body.stop-scrolling {
+  @apply overflow-clip;
+}
+.banner {
+  @apply h-screen rounded-bl-[6rem];
+  background: url("./assets/images/bg-pattern-intro-mobile.svg") 38% 33% / 325%
+      no-repeat,
+    linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+}
+@media screen and (min-width: 768px) {
+  body.stop-scrolling {
+    @apply overflow-auto;
+  }
+  .banner {
+    @apply h-screen;
+    background: url("./assets/images/bg-pattern-intro-desktop.svg") 21% 54% /
+        225% no-repeat,
+      linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  }
+}
